@@ -153,8 +153,8 @@ class API {
         });
     }
 
-    getCompetitiveLeaderboard(seasonId, startIndex = 0, size = 510) {
-        return axios.get(this.getPlayerDataServiceUrl(this.region) + `/mmr/v1/leaderboards/affinity/${this.region}/queue/competitive/season/${seasonId}?startIndex=${startIndex}&size=${size}`,{
+    getCompetitiveLeaderboard(seasonId, region, startIndex = 0, size = 510) {
+        return axios.get(this.getPlayerDataServiceUrl(region) + `/mmr/v1/leaderboards/affinity/${region}/queue/competitive/season/${seasonId}?startIndex=${startIndex}&size=${size}`,{
             headers: this.generateRequestHeaders(),
         });
     }
